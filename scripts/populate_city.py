@@ -27,5 +27,5 @@ def produce_to_topic(topic_name, data):
     producer.flush()
 
 if __name__ == "__main__":
-    data = read_json_file("scripts/us_cities.json")
-    produce_to_topic("city_data", data)
+    data = read_json_file("us_cities.json")
+    produce_to_topic("city-data", data)

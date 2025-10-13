@@ -2,7 +2,7 @@ from elasticsearch import Elasticsearch
 from elasticsearch import Elasticsearch
 from flask import Flask, jsonify, render_template
 
-app = Flask(__name__, template_folder='Users/vrams/Master/82-Hands-on/04-Data-Engineering/de-master/real-time-kafka-elasticsearch/')
+app = Flask(__name__, template_folder='/Users/vrams/Master/82-Hands-on/04-Data-Engineering/de-master/real-time-kafka-elasticsearch/templates')
 
 #es = Elasticsearch()
 es = Elasticsearch(hosts=["http://elasticsearch:9200"])
@@ -198,4 +198,4 @@ def get_total_distance_flown():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(port=5050,debug=True)

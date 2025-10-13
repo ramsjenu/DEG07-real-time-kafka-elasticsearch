@@ -11,10 +11,10 @@ export https_proxy=
 HOST="elasticsearch:9200"
 
 # define the Elasticsearch dynamic template
-# this template specifies mappings for certain field names in the ENRICHED_DATA stream
-curl -XPUT "http://${HOST}/_template/enriched_data/" -H 'Content-Type: application/json' -d'
+# this template specifies mappings for certain field names in the ENRICHED-DATA stream
+curl -XPUT "http://${HOST}/_template/enriched-data/" -H 'Content-Type: application/json' -d'
 {
-  "template": "enriched_data",
+  "template": "enriched-data",
   "settings": {
     "number_of_shards": 1,
     "number_of_replicas": 0
